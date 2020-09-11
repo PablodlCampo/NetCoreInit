@@ -1,0 +1,15 @@
+C:\Proyectos\ProyectoPruebas\CapaDatos\bin\Debug\netcoreapp3.1\CapaDatos.deps.json
+C:\Proyectos\ProyectoPruebas\CapaDatos\bin\Debug\netcoreapp3.1\CapaDatos.dll
+C:\Proyectos\ProyectoPruebas\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.csprojAssemblyReference.cache
+C:\Proyectos\ProyectoPruebas\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.AssemblyInfoInputs.cache
+C:\Proyectos\ProyectoPruebas\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.AssemblyInfo.cs
+C:\Proyectos\ProyectoPruebas\CapaDatos\bin\Debug\netcoreapp3.1\CapaDatos.pdb
+C:\Proyectos\ProyectoPruebas\CapaDatos\bin\Debug\netcoreapp3.1\CapaNegocio.dll
+C:\Proyectos\ProyectoPruebas\CapaDatos\bin\Debug\netcoreapp3.1\CapaNegocio.pdb
+C:\Proyectos\ProyectoPruebas\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.csproj.CopyComplete
+C:\Proyectos\ProyectoPruebas\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.dll
+C:\Proyectos\ProyectoPruebas\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.pdb
+C:\Proyectos\ProyectoPruebas\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Proyectos\ProyectoPruebas\CapaDatos\bin\Debug\netcoreapp3.1\CapaDatos.runtimeconfig.json
+C:\Proyectos\ProyectoPruebas\CapaDatos\bin\Debug\netcoreapp3.1\CapaDatos.runtimeconfig.dev.json
+C:\Proyectos\ProyectoPruebas\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.genruntimeconfig.cache

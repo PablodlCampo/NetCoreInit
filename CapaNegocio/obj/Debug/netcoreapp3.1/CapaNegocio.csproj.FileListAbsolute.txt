@@ -1,0 +1,9 @@
+C:\Proyectos\ProyectoPruebas\CapaNegocio\bin\Debug\netcoreapp3.1\CapaNegocio.deps.json
+C:\Proyectos\ProyectoPruebas\CapaNegocio\bin\Debug\netcoreapp3.1\CapaNegocio.dll
+C:\Proyectos\ProyectoPruebas\CapaNegocio\obj\Debug\netcoreapp3.1\CapaNegocio.AssemblyInfoInputs.cache
+C:\Proyectos\ProyectoPruebas\CapaNegocio\obj\Debug\netcoreapp3.1\CapaNegocio.AssemblyInfo.cs
+C:\Proyectos\ProyectoPruebas\CapaNegocio\bin\Debug\netcoreapp3.1\CapaNegocio.pdb
+C:\Proyectos\ProyectoPruebas\CapaNegocio\obj\Debug\netcoreapp3.1\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Proyectos\ProyectoPruebas\CapaNegocio\obj\Debug\netcoreapp3.1\CapaNegocio.dll
+C:\Proyectos\ProyectoPruebas\CapaNegocio\obj\Debug\netcoreapp3.1\CapaNegocio.pdb
+C:\Proyectos\ProyectoPruebas\CapaNegocio\obj\Debug\netcoreapp3.1\CapaNegocio.csprojAssemblyReference.cache

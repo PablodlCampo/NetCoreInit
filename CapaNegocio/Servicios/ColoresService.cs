@@ -25,7 +25,7 @@ namespace CapaNegocio.Servicios
         {
             var listaColores = new List<Color>();
 
-            foreach (var color in colores)
+            foreach (string color in colores)
             {
                 listaColores.Add(new Color()
                 {

@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InstruccionesInicio", "Inst
 		..\..\Users\Pablo\Desktop\BME\Curso.Net\GuiaCreacionProyecto.docx = ..\..\Users\Pablo\Desktop\BME\Curso.Net\GuiaCreacionProyecto.docx
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasXUnit", "PruebasXUnit\PruebasXUnit.csproj", "{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{8C33AF9D-1959-41C3-A5BB-FBF9ECCF33B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C33AF9D-1959-41C3-A5BB-FBF9ECCF33B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C33AF9D-1959-41C3-A5BB-FBF9ECCF33B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

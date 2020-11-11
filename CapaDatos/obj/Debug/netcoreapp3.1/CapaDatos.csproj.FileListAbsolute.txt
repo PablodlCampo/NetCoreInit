@@ -23,8 +23,8 @@ C:\Proyectos\NetCoreInit\CapaDatos\bin\Debug\netcoreapp3.1\CapaNegocio.pdb
 C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.csprojAssemblyReference.cache
 C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.AssemblyInfoInputs.cache
 C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.AssemblyInfo.cs
-C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.csproj.CoreCompileInputs.cache
 C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.csproj.CopyComplete
 C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.dll
 C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.pdb
 C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.genruntimeconfig.cache
+C:\Proyectos\NetCoreInit\CapaDatos\obj\Debug\netcoreapp3.1\CapaDatos.csproj.CoreCompileInputs.cache

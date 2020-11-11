@@ -10,7 +10,8 @@
         "dependencies": {
           "CapaNegocio": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
-          "Microsoft.EntityFrameworkCore.Tools": "3.1.8"
+          "Microsoft.EntityFrameworkCore.Tools": "3.1.8",
+          "Microsoft.Extensions.Caching.Abstractions": "3.1.8"
         },
         "runtime": {
           "CapaDatos.dll": {}

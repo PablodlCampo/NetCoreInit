@@ -12,5 +12,9 @@ namespace CapaNegocio.Interfaces
         void InsertMany(IEnumerable<Color> colores);
 
         void Insert(Color colores);
+
+        public string GetById(int id);
+
+        public void CargarCache();
     }
 }

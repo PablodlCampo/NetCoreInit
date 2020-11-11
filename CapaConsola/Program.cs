@@ -1,10 +1,12 @@
 ﻿
+using CapaDatos.Cache;
 using CapaDatos.Contextos;
 using CapaDatos.Repositorios;
 using CapaNegocio.Interfaces;
 using CapaNegocio.InterfacesServicios;
 using CapaNegocio.Servicios;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -24,9 +26,10 @@ namespace CapaConsola
         {
             InitServices();
 
-            List<string> colorList = LeerColores();
+            servicioColores.GetColorById(1);
 
-            InsertColores(colorList);
+            //List<string> colorList = LeerColores();
+            //InsertColores(colorList);
         }
 
         //Esta clase se encarga de la inyección de dependencias.
@@ -36,13 +39,17 @@ namespace CapaConsola
 
             services.AddTransient<IColoresService, ColoresService>();
             services.AddTransient<IColoresRepository, ColoresRepository>();
+            services.AddTransient<IColoresCache, ColoresCache>();
 
             string connectionString = "Server=localhost;Database=cuadros;Trusted_Connection=True;";
 
             services.AddDbContext<ColoresContext>(options => options.UseSqlServer(connectionString));
+            services.AddDistributedMemoryCache();
 
             var serviceProvider = services.BuildServiceProvider();
             servicioColores = serviceProvider.GetService<IColoresService>();
+
+            servicioColores.CargarCache();
         }
 
         public static List<string> LeerColores()

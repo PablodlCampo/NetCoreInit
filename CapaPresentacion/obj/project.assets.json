@@ -1501,7 +1501,8 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "CapaNegocio": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
+          "Microsoft.Extensions.Caching.Abstractions": "3.1.8"
         },
         "compile": {
           "bin/placeholder/CapaDatos.dll": {}
@@ -5824,7 +5825,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

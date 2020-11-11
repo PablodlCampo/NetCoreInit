@@ -14,6 +14,7 @@ using CapaNegocio.Interfaces;
 using CapaDatos.Repositorios;
 using CapaNegocio.InterfacesServicios;
 using CapaNegocio.Servicios;
+using CapaDatos.Cache;
 
 namespace CapaPresentacion
 {
@@ -41,6 +42,10 @@ namespace CapaPresentacion
             //Esta línea permite inyectar el respositorio de Colores en controladores, etc...
             services.AddScoped<IColoresRepository, ColoresRepository>();
             services.AddScoped<IColoresService, ColoresService>();
+            services.AddScoped<IColoresCache, ColoresCache>();
+            services.AddDistributedMemoryCache();
+
+            //TODO Cargar colores desde la cache
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

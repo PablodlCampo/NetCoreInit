@@ -4,6 +4,7 @@ using CapaNegocio.InterfacesServicios;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace CapaNegocio.Servicios
 {
     public class ColoresService : IColoresService
@@ -35,6 +36,16 @@ namespace CapaNegocio.Servicios
 
             //Convendría gestionar las execpciones con un try catch...
             _coloresRepository.InsertMany(listaColores);
+        }
+
+        public string GetColorById(int Id)
+        {
+            return _coloresRepository.GetById(Id);
+        }
+
+        public void CargarCache()
+        {
+            _coloresRepository.CargarCache();
         }
     }
 }

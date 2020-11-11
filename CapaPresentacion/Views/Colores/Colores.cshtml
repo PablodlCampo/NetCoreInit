@@ -1,7 +1,9 @@
 ﻿@using CapaNegocio.Entidades;
+@* Esta línea es necesaria para utilizar los tags de .Net Core *@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @* Indicamos que vamos a utilizar una lista de colores como modelo *@
 @model List<Color>;
-
 @* Esta función debería pintar el nombre de cada uno de los colores *@
 @foreach (var color in Model)
 {

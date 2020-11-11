@@ -162,3 +162,6 @@ C:\Proyectos\NetCoreInit\CapaPresentacion\obj\Debug\netcoreapp3.1\staticwebasset
 C:\Proyectos\NetCoreInit\CapaPresentacion\obj\Debug\netcoreapp3.1\CapaPresentacion.dll
 C:\Proyectos\NetCoreInit\CapaPresentacion\obj\Debug\netcoreapp3.1\CapaPresentacion.pdb
 C:\Proyectos\NetCoreInit\CapaPresentacion\obj\Debug\netcoreapp3.1\CapaPresentacion.genruntimeconfig.cache
+C:\Proyectos\NetCoreInit\CapaPresentacion\obj\Debug\netcoreapp3.1\CapaPresentacion.Idiomas.English.resources
+C:\Proyectos\NetCoreInit\CapaPresentacion\obj\Debug\netcoreapp3.1\CapaPresentacion.Idiomas.Spanish.resources
+C:\Proyectos\NetCoreInit\CapaPresentacion\obj\Debug\netcoreapp3.1\CapaPresentacion.csproj.GenerateResource.cache

@@ -8,5 +8,9 @@ namespace CapaNegocio.InterfacesServicios
         List<Color> GetColores();
 
         void InsertColores(List<string> colores);
+
+        string GetColorById(int Id);
+
+        void CargarCache();
     }
 }

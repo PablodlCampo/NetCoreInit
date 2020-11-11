@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CapaDatos.Migrations
 {
-    [DbContext(typeof(ColoresContext))]
+    [DbContext(typeof(GlobalContext))]
     [Migration("20200911081219_M2")]
     partial class M2
     {

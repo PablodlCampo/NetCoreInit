@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CapaDatos.Migrations
 {
-    [DbContext(typeof(ColoresContext))]
+    [DbContext(typeof(GlobalContext))]
     partial class ColoresContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

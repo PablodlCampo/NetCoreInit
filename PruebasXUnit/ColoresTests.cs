@@ -31,31 +31,31 @@ namespace PruebasXUnit
 
         private void InitServices()
         {
-            ColoresContext context = ObtenerContexto();
+            GlobalContext context = ObtenerContexto();
 
             servicioColores = new ColoresService(new ColoresRepository(context, _coloresCache));
         }
 
-        private ColoresContext ObtenerContexto()
+        private GlobalContext ObtenerContexto()
         {
             //Indicamos que utilizará base de datos en memoria
             //y que no deseamos que marque error si realizamos
             //transacciones en el código de nuestra aplicación
-            var options = new DbContextOptionsBuilder<ColoresContext>()
+            var options = new DbContextOptionsBuilder<GlobalContext>()
                             .ConfigureWarnings
                             (x => x.Ignore(InMemoryEventId
                                     .TransactionIgnoredWarning))
                             .UseInMemoryDatabase(databaseName: "Test")
                                     .Options;
             //Inicializamos la configuración de la base de datos
-            var context = new ColoresContext(options);
+            var context = new GlobalContext(options);
 
             //Creamos unos datos de prueba.
             Inicializar(context);
             return context;
         }
 
-        private void Inicializar(ColoresContext contexto)
+        private void Inicializar(GlobalContext contexto)
         {
             //Te aseguras que la base de datos haya sido creada
             contexto.Database.EnsureCreated();

@@ -384,3 +384,7 @@ MigrationBackup/
 .ionide/
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,windows
+
+*.pdb
+*.dll
+*.deps.json

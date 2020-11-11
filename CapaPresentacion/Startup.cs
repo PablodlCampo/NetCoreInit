@@ -35,7 +35,8 @@ namespace CapaPresentacion
             //--- Aquí es donde deben inicializarse los contextos e informar cual sera su conexión a base de datos.
 
             //Lo correcto sería leer esta linea desde un archivo de configuración.
-            string connectionString = "Server=localhost;Database=cuadros;Trusted_Connection=True;";
+            //string connectionString = "Server=localhost;Database=cuadros;Trusted_Connection=True;";
+            string connectionString = "Server=localhost;Database=cuadros;User Id=SA;Password=Password@12345";
 
             services.AddDbContext<ColoresContext>(options => options.UseSqlServer(connectionString));
 

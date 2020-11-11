@@ -1,15 +1,11 @@
-﻿using CapaDatos.Contextos;
+﻿using CapaDatos.Cache;
+using CapaDatos.Contextos;
 using CapaDatos.Repositorios;
 using CapaNegocio.Entidades;
-using CapaNegocio.Interfaces;
-using CapaNegocio.InterfacesServicios;
 using CapaNegocio.Servicios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace PruebasXUnit
@@ -17,6 +13,7 @@ namespace PruebasXUnit
     public class ColoresTests
     {
         private static ColoresService servicioColores = null;
+        protected readonly IColoresCache _coloresCache = null;
 
         public ColoresTests()
         {
@@ -36,7 +33,7 @@ namespace PruebasXUnit
         {
             ColoresContext context = ObtenerContexto();
 
-            servicioColores = new ColoresService(new ColoresRepository(context));
+            servicioColores = new ColoresService(new ColoresRepository(context, _coloresCache));
         }
 
         private ColoresContext ObtenerContexto()

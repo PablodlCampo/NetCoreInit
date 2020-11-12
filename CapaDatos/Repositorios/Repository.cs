@@ -1,11 +1,12 @@
 ﻿using CapaDatos.Contextos;
+using CapaNegocio.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace CapaDatos.Repositorios
 {
-    public class Repository<TEntity> where TEntity : class
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly GlobalContext _dbContext;
 

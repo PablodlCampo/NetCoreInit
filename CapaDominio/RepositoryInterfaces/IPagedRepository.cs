@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace CapaNegocio.Interfaces
+namespace CapaDominio.RepositoryInterfaces
 {
     public interface IPagedRepository<TEntity, TFilter, TOrder> : IRepository<TEntity>
         where TEntity : class

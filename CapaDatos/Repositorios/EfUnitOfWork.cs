@@ -1,4 +1,4 @@
-﻿using CapaNegocio.Interfaces;
+﻿using CapaDominio.RepositoryInterfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace CapaDatos.Repositorios

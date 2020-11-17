@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InstruccionesInicio", "Inst
 		..\..\Users\Pablo\Desktop\BME\Curso.Net\GuiaCreacionProyecto.docx = ..\..\Users\Pablo\Desktop\BME\Curso.Net\GuiaCreacionProyecto.docx
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasXUnit", "PruebasXUnit\PruebasXUnit.csproj", "{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebasXUnit", "PruebasXUnit\PruebasXUnit.csproj", "{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDominio", "CapaDominio\CapaDominio.csproj", "{8CCF1AE7-C43F-4203-A5C5-1712961C408A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43BEB5E8-1066-4ADA-AD4E-94277B2745EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCF1AE7-C43F-4203-A5C5-1712961C408A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCF1AE7-C43F-4203-A5C5-1712961C408A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCF1AE7-C43F-4203-A5C5-1712961C408A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCF1AE7-C43F-4203-A5C5-1712961C408A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

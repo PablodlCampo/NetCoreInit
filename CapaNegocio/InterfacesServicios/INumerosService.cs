@@ -1,4 +1,4 @@
-﻿namespace CapaNegocio.Interfaces
+﻿namespace CapaNegocio.InterfacesServicios
 {
     public interface INumerosService
     {

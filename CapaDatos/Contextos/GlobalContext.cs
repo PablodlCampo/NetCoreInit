@@ -1,4 +1,5 @@
-﻿using CapaNegocio.Entidades;
+﻿using CapaDominio.Entities;
+using CapaDominio.RepositoryInterfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace CapaDatos.Contextos

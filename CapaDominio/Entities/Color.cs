@@ -1,4 +1,4 @@
-﻿namespace CapaNegocio.Entidades
+﻿namespace CapaDominio.Entities
 {
     public class Color
     {

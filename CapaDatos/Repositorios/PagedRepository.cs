@@ -1,5 +1,5 @@
 ﻿using CapaDatos.Contextos;
-using CapaNegocio.Interfaces;
+using CapaDominio.RepositoryInterfaces;
 using System.Linq;
 
 namespace CapaDatos.Repositorios

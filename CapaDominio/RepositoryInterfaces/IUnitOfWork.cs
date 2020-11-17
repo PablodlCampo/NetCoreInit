@@ -1,4 +1,4 @@
-﻿namespace CapaNegocio.Interfaces
+﻿namespace CapaDominio.RepositoryInterfaces
 {
     public interface IUnitOfWork
     {

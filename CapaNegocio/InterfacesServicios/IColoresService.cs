@@ -1,4 +1,4 @@
-﻿using CapaNegocio.Entidades;
+﻿using CapaDominio.Entities;
 using System.Collections.Generic;
 
 namespace CapaNegocio.InterfacesServicios

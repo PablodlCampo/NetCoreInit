@@ -1,9 +1,8 @@
-﻿using CapaNegocio.Entidades;
-using CapaNegocio.Interfaces;
+﻿using CapaDominio.Entities;
+using CapaDominio.RepositoryInterfaces;
 using CapaNegocio.InterfacesServicios;
 using System.Collections.Generic;
 using System.Linq;
-
 
 namespace CapaNegocio.Servicios
 {

@@ -43,7 +43,7 @@ namespace CapaConsola
 
             string connectionString = "Server=localhost;Database=cuadros;Trusted_Connection=True;";
 
-            services.AddDbContext<ColoresContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<GlobalContext>(options => options.UseSqlServer(connectionString));
             services.AddDistributedMemoryCache();
 
             var serviceProvider = services.BuildServiceProvider();

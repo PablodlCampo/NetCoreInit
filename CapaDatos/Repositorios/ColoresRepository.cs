@@ -10,10 +10,10 @@ namespace CapaDatos.Repositorios
 {
     public class ColoresRepository : IColoresRepository
     {
-        protected readonly ColoresContext _dbContext;
+        protected readonly GlobalContext _dbContext;
         protected readonly IColoresCache _coloresCache;
 
-        public ColoresRepository(ColoresContext dbContext, IColoresCache coloresCache)
+        public ColoresRepository(GlobalContext dbContext, IColoresCache coloresCache)
         {
             _dbContext = dbContext;
             _coloresCache = coloresCache;

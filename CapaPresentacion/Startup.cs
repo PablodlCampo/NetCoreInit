@@ -38,7 +38,7 @@ namespace CapaPresentacion
             //string connectionString = "Server=localhost;Database=cuadros;Trusted_Connection=True;";
             string connectionString = "Server=localhost;Database=cuadros;User Id=SA;Password=Password@12345";
 
-            services.AddDbContext<ColoresContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<GlobalContext>(options => options.UseSqlServer(connectionString));
 
             //Esta línea permite inyectar el respositorio de Colores en controladores, etc...
             services.AddScoped<IColoresRepository, ColoresRepository>();

@@ -1,7 +1,7 @@
 ﻿using CapaDatos.Cache;
 using CapaDatos.Contextos;
 using CapaDatos.Repositorios;
-using CapaNegocio.Entidades;
+using CapaDominio.Entities;
 using CapaNegocio.Servicios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;

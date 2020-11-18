@@ -1,4 +1,4 @@
-﻿using CapaNegocio.Entidades;
+﻿using CapaDominio.Entities;
 using CapaNegocio.InterfacesServicios;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace CapaPresentacion.Controllers
 {
     public class ColoresController : Controller //Heredar de Controller permite al ColoresController utilizar sus funciones como IActionResult.
     {
-        private IColoresService _coloresService = null;
+        private readonly IColoresService _coloresService = null;
 
         public ColoresController(IColoresService coloresService)
         {

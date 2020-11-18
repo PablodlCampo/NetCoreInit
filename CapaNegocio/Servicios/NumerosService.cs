@@ -1,4 +1,4 @@
-﻿using CapaNegocio.Interfaces;
+﻿using CapaNegocio.InterfacesServicios;
 
 namespace CapaNegocio.Servicios
 {

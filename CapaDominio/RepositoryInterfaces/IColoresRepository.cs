@@ -1,9 +1,7 @@
-﻿using CapaNegocio.Entidades;
-using System;
+﻿using CapaDominio.Entities;
 using System.Collections.Generic;
-using System.Text;
 
-namespace CapaNegocio.Interfaces
+namespace CapaDominio.RepositoryInterfaces
 {
     public interface IColoresRepository
     {

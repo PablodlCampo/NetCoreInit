@@ -1,20 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CapaDatos.Contextos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using CapaNegocio.Interfaces;
 using CapaDatos.Repositorios;
 using CapaNegocio.InterfacesServicios;
 using CapaNegocio.Servicios;
 using CapaDatos.Cache;
+using CapaDominio.RepositoryInterfaces;
 
 namespace CapaPresentacion
 {

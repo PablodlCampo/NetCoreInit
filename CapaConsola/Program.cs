@@ -1,17 +1,14 @@
-﻿
-using CapaDatos.Cache;
+﻿using CapaDatos.Cache;
 using CapaDatos.Contextos;
 using CapaDatos.Repositorios;
-using CapaNegocio.Interfaces;
+using CapaDominio.RepositoryInterfaces;
 using CapaNegocio.InterfacesServicios;
 using CapaNegocio.Servicios;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 
 namespace CapaConsola
 {

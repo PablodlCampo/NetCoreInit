@@ -1,11 +1,11 @@
 ﻿using CapaDatos.Contextos;
+using CapaDominio.RepositoryInterfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace CapaDatos.Repositorios
 {
-    public class Repository<TEntity> where TEntity : class
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly GlobalContext _dbContext;
 
@@ -39,11 +39,6 @@ namespace CapaDatos.Repositorios
             return _dbContext.Set<TEntity>().FromSqlRaw(query, parameters);
         }
 
-        public void Remove(TEntity entity)
-        {
-            _dbContext.Set<TEntity>().Remove(entity);
-        }
-
         public void RemoveAttach(TEntity entityToDelete)
         {
 
@@ -57,6 +52,11 @@ namespace CapaDatos.Repositorios
 
             _dbContext.Set<TEntity>().Remove(entityToDelete);
 
+        }
+
+        public void Remove(TEntity entity)
+        {
+            _dbContext.Set<TEntity>().Remove(entity);
         }
 
         public void Remove(object id)

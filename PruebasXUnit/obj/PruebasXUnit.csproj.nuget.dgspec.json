@@ -27,6 +27,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Proyectos\\NetCoreInit\\CapaDominio\\CapaDominio.csproj": {
+                "projectPath": "C:\\Proyectos\\NetCoreInit\\CapaDominio\\CapaDominio.csproj"
+              },
               "C:\\Proyectos\\NetCoreInit\\CapaNegocio\\CapaNegocio.csproj": {
                 "projectPath": "C:\\Proyectos\\NetCoreInit\\CapaNegocio\\CapaNegocio.csproj"
               }
@@ -42,6 +45,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "EnyimMemcachedCore": {
+              "target": "Package",
+              "version": "[2.4.5, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.8, )"
@@ -57,6 +64,58 @@
               "version": "[3.1.8, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Proyectos\\NetCoreInit\\CapaDominio\\CapaDominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Proyectos\\NetCoreInit\\CapaDominio\\CapaDominio.csproj",
+        "projectName": "CapaDominio",
+        "projectPath": "C:\\Proyectos\\NetCoreInit\\CapaDominio\\CapaDominio.csproj",
+        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\NetCoreInit\\CapaDominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",
@@ -98,7 +157,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Proyectos\\NetCoreInit\\CapaDominio\\CapaDominio.csproj": {
+                "projectPath": "C:\\Proyectos\\NetCoreInit\\CapaDominio\\CapaDominio.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

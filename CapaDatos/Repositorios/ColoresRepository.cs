@@ -1,7 +1,7 @@
 ﻿using CapaDatos.Cache;
 using CapaDatos.Contextos;
-using CapaNegocio.Entidades;
-using CapaNegocio.Interfaces;
+using CapaDominio.Entities;
+using CapaDominio.RepositoryInterfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

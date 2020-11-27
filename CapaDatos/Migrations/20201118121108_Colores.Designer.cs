@@ -3,14 +3,16 @@ using CapaDatos.Contextos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CapaDatos.Migrations
 {
     [DbContext(typeof(GlobalContext))]
-    partial class ColoresContextModelSnapshot : ModelSnapshot
+    [Migration("20201118121108_Colores")]
+    partial class Colores
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

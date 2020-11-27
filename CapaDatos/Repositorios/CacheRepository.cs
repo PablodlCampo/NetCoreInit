@@ -50,7 +50,7 @@ namespace CapaDatos.Repositorios
 
         public void Set(Color entity)
         {
-            var cacheKey = GetKey(entity.Nombre, entity.ID.ToString());
+            var cacheKey = GetKey(entity.Nombre, entity.Id.ToString());
 
             _distributedCache.Set(cacheKey, ToByteArray(entity));
 
@@ -59,7 +59,7 @@ namespace CapaDatos.Repositorios
 
         public void Update(Color entity)
         {
-            var cacheKey = GetKey(entity.Nombre, entity.ID.ToString());
+            var cacheKey = GetKey(entity.Nombre, entity.Id.ToString());
 
             _distributedCache.Set(cacheKey, ToByteArray(entity));
 
@@ -70,7 +70,7 @@ namespace CapaDatos.Repositorios
         {
             Color entity = _repository.GetById(id);
 
-            var cacheKey = GetKey(entity.Nombre, entity.ID.ToString());
+            var cacheKey = GetKey(entity.Nombre, entity.Id.ToString());
 
             _distributedCache.Set(cacheKey, null);
 
@@ -79,7 +79,7 @@ namespace CapaDatos.Repositorios
 
         public void Remove(Color entity)
         {
-            var cacheKey = GetKey(entity.Nombre, entity.ID.ToString());
+            var cacheKey = GetKey(entity.Nombre, entity.Id.ToString());
 
             _distributedCache.Set(cacheKey, null);
 
@@ -90,7 +90,7 @@ namespace CapaDatos.Repositorios
         {
             foreach (var entity in entities)
             {
-                var cacheKey = GetKey(entity.Nombre, entity.ID.ToString());
+                var cacheKey = GetKey(entity.Nombre, entity.Id.ToString());
                 _distributedCache.Set(cacheKey, null);
             }
 

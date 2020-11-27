@@ -2,6 +2,7 @@
 using CapaDatos.Contextos;
 using CapaDatos.Repositorios;
 using CapaDominio.Entities;
+using CapaDominio.RepositoryInterfaces;
 using CapaNegocio.Servicios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -32,8 +33,6 @@ namespace PruebasXUnit
         private void InitServices()
         {
             GlobalContext context = ObtenerContexto();
-
-            servicioColores = new ColoresService(new ColoresRepository(context, _coloresCache));
         }
 
         private GlobalContext ObtenerContexto()

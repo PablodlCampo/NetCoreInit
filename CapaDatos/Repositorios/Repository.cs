@@ -19,6 +19,11 @@ namespace CapaDatos.Repositorios
             _dbContext.Set<TEntity>().Add(entity);
         }
 
+        public void AddRange(IEnumerable<TEntity> entity)
+        {
+            _dbContext.Set<TEntity>().AddRange(entity);
+        }
+
         public void Update(TEntity entity)
         {
             _dbContext.Set<TEntity>().Update(entity);

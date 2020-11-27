@@ -1,13 +1,14 @@
-﻿using CapaDominio.RepositoryInterfaces;
+﻿using CapaDatos.Contextos;
+using CapaDominio.RepositoryInterfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace CapaDatos.Repositorios
 {
     public class EfUnitOfWork : IUnitOfWork
     {
-        private readonly DbContext _context;
+        private readonly GlobalContext _context;
 
-        public EfUnitOfWork(DbContext context)
+        public EfUnitOfWork(GlobalContext context)
         {
             _context = context;
         }

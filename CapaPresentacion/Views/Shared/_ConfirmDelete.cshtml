@@ -1,0 +1,21 @@
+﻿<form asp-action="Delete" id="deleteForm">
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <input type="hidden" name="id" id="DeleteModalId" value="" />
+            <input type="hidden" name="code" id="DeleteModalCode" value="" />
+            <input type="hidden" name="key" id="DeleteModalKey" value="" />
+            <div class="modal-content">
+                <div tra class="modal-header">
+                    GENERAL_DELETE_ENTRY
+                </div>
+                <div class="modal-body">
+                    <p id="modal-delete-item"></p>
+                </div>
+                <div class="modal-footer">
+                    <button tra type="button" class="btn btn-primary default" id="ModalDelete">GENERAL_SAVE_BUTTON</button>
+                    <button tra type="button" class="btn btn-secondary" data-dismiss="modal">GENERAL_CLOSE_BUTTON</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

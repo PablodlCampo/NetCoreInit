@@ -1,0 +1,25 @@
+﻿@using CapaDominio.Entities
+@using CapaNegocio.DTOs.TableDTOs
+@using CapaNegocio.DTOs
+@using CapaDominio.Enums
+
+@model PaginatedListDto<ColorDto, ColorOrders>
+
+@{
+    var itemsPerPage = ViewData["ItemsPerPage"];
+    var currentSort = ViewData["CurrentSort"];
+    var currentFilter = ViewData["CurrentFilter"];
+}
+
+<div id="results">
+    @*<partial name="_Results" model="@Model" />*@
+</div>
+<partial name="_ConfirmDelete" />
+
+@section Scripts {
+    <script src="~/js/Pagination.js"></script>
+    <script src="~/js/Colores.js"></script>
+    @*<script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>*@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+}

@@ -30,6 +30,13 @@
         </nav>
     </header>
     <div class="container">
+        @* Modal utilizado para la edición *@
+        <div id="modal-placeholder"></div>
+        <div id="loading-div"></div>
+        <div id="loading-div-combos"></div>
+        @* Partial que contiene los textos generales utilizados en Javascript *@
+
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -43,6 +50,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.7/packaged/jquery.noty.packaged.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

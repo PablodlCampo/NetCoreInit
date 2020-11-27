@@ -1,0 +1,65 @@
+﻿@using CapaDominio.Entities
+@using CapaNegocio.DTOs.TableDTOs
+@using CapaNegocio.DTOs
+@using CapaDominio.Enums
+
+@model PaginatedListDto<ColorDto, ColorOrders>
+
+<input type="hidden" id="ajaxCallback" value="@Url.Action("Index", "Colores")" />
+
+<div class="grid-container">
+    <div class="grid-item item1 d-inline-block">
+        <partial name="_ItemsPerPage" model="@Model.PageInfo" />
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a tra class="@ViewData["IdStyle"]"
+                   asp-route-ascOrDescOrder="@ViewData["IdAsc"]"
+                   asp-route-itemsPerPage="@ViewData["ItemsPerPage"]"
+                   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                   asp-action="Index"
+                   asp-route-sortOrder="Id">TABLE_COUNTRIES_CODE</a>
+            </th>
+            <th>
+                <a tra class="@ViewData["NombreStyle"]"
+                   asp-route-ascOrDescOrder="@ViewData["NombreDesc"]"
+                   asp-route-itemsPerPage="@ViewData["ItemsPerPage"]"
+                   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                   asp-action="Index"
+                   asp-route-sortOrder="Description">TABLE_COUNTRIES_DESCRIPTION</a>
+            </th>
+            <th tra>GENERAL_ACTIONS</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Items != null && Model.Items.Any())
+        {
+            foreach (var color in @Model.Items)
+            {
+                <tr>
+                    <td class="col-md-5"> @color.Id</td>
+                    <td class="col-md-5">@color.Nombre</td>
+                    <td class="col-md-1">
+                        <a href="#" data-url="@Url.Action("Edit", "Colores", new { Code = color.Id})" data-toggle="ajax-modal" data-target="#add-contact" style="font-size:24px" class="fa fa-pencil edit-button"></a>
+                    </td>
+
+                    <td class="col-md-1">
+                        <input class="delete-button-value code" type="hidden" value="@color.Id" />
+                        <input class="delete-button-value desc" type="hidden" value="@color.Nombre" />
+                        <a href="#" data-toggle="modal" data-target="#confirm-delete" style="font-size:24px" class="fa fa-remove delete-button"></a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<partial name="_Pagination" model="@Model.PageInfo" />
+<script>
+    $(document).ready(function () {
+        InitButtons();
+    });
+</script>

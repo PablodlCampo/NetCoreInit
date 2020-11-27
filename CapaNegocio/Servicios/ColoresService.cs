@@ -1,5 +1,9 @@
-﻿using CapaDominio.Entities;
+﻿using AutoMapper;
+using CapaDominio.Entities;
+using CapaDominio.Enums;
 using CapaDominio.RepositoryInterfaces;
+using CapaNegocio.DTOs;
+using CapaNegocio.DTOs.TableDTOs;
 using CapaNegocio.InterfacesServicios;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +12,31 @@ namespace CapaNegocio.Servicios
 {
     public class ColoresService : IColoresService
     {
-        private IColoresRepository _coloresRepository = null;
+        private readonly IColoresRepository _coloresRepository = null;
+        private readonly IUnitOfWork _unitOfWork = null;
+        private readonly IMapper _mapper;
 
-        public ColoresService(IColoresRepository coloresRepository)
+        public ColoresService(IColoresRepository coloresRepository, IUnitOfWork unitOfWork, IMapper mapper)
         {
             _coloresRepository = coloresRepository;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+        }
+
+        public PaginatedListDto<ColorDto, ColorOrders> GetPaged(PaginatedListRequest<ColorOrders> request)
+        {
+            GetPageResponse<Color, ColorFilter, ColorOrder> countries = _coloresRepository.GetPaged
+            (
+                new GetPageRequest<Color, ColorFilter, ColorOrder>()
+                {
+                    PageNumber = request.CurrentPage,
+                    PageSize = request.PageSize,
+                    Filter = new ColorFilter(request.MultiSearch ?? string.Empty),
+                    Order = new ColorOrder(request.OrderList),
+                }
+            );
+
+            return new PaginatedListDto<ColorDto, ColorOrders>(_mapper.Map<List<Color>, List<ColorDto>>(countries.Entities.ToList()), countries.NumPages, countries.NumTotalEntities, request);
         }
 
         public List<Color> GetColores()
@@ -34,17 +58,39 @@ namespace CapaNegocio.Servicios
             }
 
             //Convendría gestionar las execpciones con un try catch...
-            _coloresRepository.InsertMany(listaColores);
+            _coloresRepository.AddRange(listaColores);
         }
 
-        public string GetColorById(int Id)
+        public Color GetColorById(int Id)
         {
             return _coloresRepository.GetById(Id);
         }
 
+        public void DeleteByCode(int Id)
+        {
+            _coloresRepository.Remove(Id);
+            _unitOfWork.SaveChanges();
+        }
+
+        public void Save(Color color)
+        {
+            if (color.Id == 0)
+            {
+                _coloresRepository.Insert(color);
+            }
+            else
+            {
+                var bdColor = _coloresRepository.GetById(color.Id);
+                bdColor.Nombre = color.Nombre;
+                _coloresRepository.Update(bdColor);
+            }
+
+            _unitOfWork.SaveChanges();
+        }
+
         public void CargarCache()
         {
-            _coloresRepository.CargarCache();
+            //_coloresRepository.CargarCache();
         }
     }
 }

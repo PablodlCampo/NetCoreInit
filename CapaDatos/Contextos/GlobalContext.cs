@@ -1,5 +1,4 @@
 ﻿using CapaDominio.Entities;
-using CapaDominio.RepositoryInterfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace CapaDatos.Contextos
@@ -15,5 +14,12 @@ namespace CapaDatos.Contextos
 
         //Para replicar las entidades en base de datos hay que tener instalada la librerias Microsoft.EntityFrameworkCore.Tools
         // y ejecutar el comando Add-Migration y despues el comando Update-Database
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.SeedColours();
+        }
     }
 }

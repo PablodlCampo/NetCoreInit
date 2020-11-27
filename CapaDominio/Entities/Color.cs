@@ -1,8 +1,11 @@
-﻿namespace CapaDominio.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CapaDominio.Entities
 {
     public class Color
     {
-        public int ID { get; set; }
+        [Key]
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public bool Primario 
         {
@@ -10,7 +13,7 @@
             {
                 bool primario = false;
 
-                if (Nombre.Trim().ToLower().Equals("rojo") || Nombre.Trim().ToLower().Equals("verde") || Nombre.Trim().ToLower().Equals("azul"))
+                if (!string.IsNullOrEmpty(Nombre) && (Nombre.Trim().ToLower().Equals("rojo") || Nombre.Trim().ToLower().Equals("verde") || Nombre.Trim().ToLower().Equals("azul")))
                 {
                     primario = true;
                 }

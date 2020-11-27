@@ -8,20 +8,13 @@ using System.Text;
 
 namespace CapaDatos.Repositorios
 {
-    public class ColoresRepository : IColoresRepository
+    public class ColoresRepository : PagedRepository<Color, ColorFilter, ColorOrder>, IColoresRepository
     {
-        protected readonly GlobalContext _dbContext;
         protected readonly IColoresCache _coloresCache;
 
-        public ColoresRepository(GlobalContext dbContext, IColoresCache coloresCache)
+        public ColoresRepository(GlobalContext dbContext, IColoresCache coloresCache) : base(dbContext)
         {
-            _dbContext = dbContext;
             _coloresCache = coloresCache;
-        }
-
-        public IEnumerable<Color> GetAll()
-        {
-            return _dbContext.Colores.ToList();
         }
 
         public void InsertMany(IEnumerable<Color> colores)
@@ -38,8 +31,9 @@ namespace CapaDatos.Repositorios
             _dbContext.SaveChanges();
         }
 
-        public string GetById(int id)
+        public Color GetById(int id)
         {
+            return _dbContext.Colores.Find(id);
             string color = string.Empty;
             string cacheKey = "COLOR_" + id;
 
@@ -62,8 +56,6 @@ namespace CapaDatos.Repositorios
                     _coloresCache.Set(cacheKey, Encoding.ASCII.GetBytes(string.Empty));
                 }
             }
-
-            return color;
         }
 
         public void CargarCache()
@@ -72,7 +64,7 @@ namespace CapaDatos.Repositorios
 
             foreach (var color in colores)
             {
-                string key = "COLOR_" + color.ID;
+                string key = "COLOR_" + color.Id;
 
                 _coloresCache.Set(key, Encoding.ASCII.GetBytes(color.Nombre));
             }

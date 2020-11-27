@@ -10,6 +10,7 @@ using CapaNegocio.InterfacesServicios;
 using CapaNegocio.Servicios;
 using CapaDatos.Cache;
 using CapaDominio.RepositoryInterfaces;
+using AutoMapper;
 
 namespace CapaPresentacion
 {
@@ -39,14 +40,31 @@ namespace CapaPresentacion
             services.AddScoped<IColoresRepository, ColoresRepository>();
             services.AddScoped<IColoresService, ColoresService>();
             services.AddScoped<IColoresCache, ColoresCache>();
+            services.AddScoped<IUnitOfWork, EfUnitOfWork>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddDistributedMemoryCache();
+
+            MapperConfiguration mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new CapaNegocio.Mappers.AutoMapper());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             //TODO Cargar colores desde la cache
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, GlobalContext globalContext)
         {
+            //Reconstruye la base de datos si esta no existiese
+            if (!env.IsProduction())
+            {
+                globalContext.Database.Migrate();
+            }
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -72,7 +90,7 @@ namespace CapaPresentacion
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Colores}/{action=Colores}/{id?}");
+                    pattern: "{controller=Colores}/{action=Index}/{id?}");
             });
         }
     }

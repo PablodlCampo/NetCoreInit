@@ -1,0 +1,22 @@
+﻿@using CapaNegocio.DTOs.TableDTOs
+@model PagesInfoDto
+
+@{
+    var itemsPerPage = ViewData["ItemsPerPage"];
+}
+
+<form asp-action="Index">
+    <input type="hidden" name="currentSort" value="@ViewData["CurrentSort"]" />
+    <input type="hidden" name="currentFilter" value="@ViewData["CurrentFilter"]" />
+    <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
+    <p>
+        <tra>GENERAL_SHOWING</tra>
+        <select asp-for="@itemsPerPage" class=" itemsPerPage" onchange="this.form.submit()">
+            <option selected value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        <tra>GENERAL_RECORDS</tra>
+    </p>
+</form>

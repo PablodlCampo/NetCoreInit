@@ -6,6 +6,8 @@ namespace CapaDominio.RepositoryInterfaces
     {
         void Add(TEntity entity);
 
+        void AddRange(IEnumerable<TEntity> entity);
+
         void Update(TEntity entity);
 
         TEntity GetById(object id);
@@ -15,10 +17,10 @@ namespace CapaDominio.RepositoryInterfaces
         IEnumerable<TEntity> GetWithRawSql(string query, params object[] parameters);
 
         void Remove(TEntity entity);
+        
+        void Remove(object id);
 
         void RemoveAttach(TEntity entityToDelete);
-
-        void Remove(object id);
 
         void RemoveRange(IEnumerable<TEntity> entity);
     }

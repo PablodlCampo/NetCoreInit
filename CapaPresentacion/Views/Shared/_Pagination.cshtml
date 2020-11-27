@@ -1,0 +1,79 @@
+﻿@using CapaNegocio.DTOs.TableDTOs
+@model PagesInfoDto
+
+@{
+    var startIndex = Math.Max(Model.CurrentPage - 10, 1);
+    var finishIndex = Math.Min(Model.CurrentPage + 10, Model.TotalPages);
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<div class="table-items-page d-inline-block">
+    @Model.FirstRowOnPage <tra>GENERAL_TO</tra> @Model.LastRowOnPage <tra>GENERAL_OF</tra> @Model.TotalItems <tra>GENERAL_TOTAL</tra>
+</div>
+
+<div class="bottom-table float-right d-inline-block">
+    @if (Model.TotalPages > 1)
+    {
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li>
+                    <a asp-action="Index"
+                       asp-route-sortOrder="@ViewData["CurrentSort"]"
+                       asp-route-pageNumber="@(1)"
+                       asp-route-itemsPerPage="@ViewData["ItemsPerPage"]"
+                       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                       class="page-link btn btn-default @prevDisabled">&laquo;&laquo;</a>
+                </li>
+                <li class="page-item">
+                    <a asp-action="Index"
+                       asp-route-sortOrder="@ViewData["CurrentSort"]"
+                       asp-route-pageNumber="@(Model.CurrentPage - 1)"
+                       asp-route-itemsPerPage="@ViewData["ItemsPerPage"]"
+                       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                       class="page-link btn btn-default @prevDisabled">&laquo;</a>
+                </li>
+
+                @* Page Numbers *@
+                @for (var i = startIndex; i <= finishIndex; i++)
+                {
+                    @if (i == Model.CurrentPage)
+                    {
+
+                        <li class="page-item active"><a class="page-link"><span>@i</span></a></li>
+                    }
+                    else
+                    {
+
+                        <li class="page-item">
+                            <a class="page-link" asp-route-pageNumber="@i"
+                               asp-route-sortOrder="@ViewData["CurrentSort"]"
+                               asp-route-itemsPerPage="@ViewData["ItemsPerPage"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                                @i
+                            </a>
+                        </li>
+                    }
+                }
+
+                <li>
+                    <a asp-action="Index"
+                       asp-route-sortOrder="@ViewData["CurrentSort"]"
+                       asp-route-pageNumber="@(Model.CurrentPage + 1)"
+                       asp-route-itemsPerPage="@ViewData["ItemsPerPage"]"
+                       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                       class="page-link btn btn-default @nextDisabled">&raquo;</a>
+                </li>
+
+                <li>
+                    <a asp-action="Index"
+                       asp-route-sortOrder="@ViewData["CurrentSort"]"
+                       asp-route-pageNumber="@(Model.TotalPages)"
+                       asp-route-itemsPerPage="@ViewData["ItemsPerPage"]"
+                       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                       class="page-link btn btn-default @nextDisabled">&raquo;&raquo;</a>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>

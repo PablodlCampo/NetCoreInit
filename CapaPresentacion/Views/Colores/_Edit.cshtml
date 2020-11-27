@@ -1,0 +1,34 @@
+﻿@using CapaDominio.Entities
+
+@model Color
+
+<div class="modal fade" id="edit-country" tabindex="-1" role="dialog" aria-labelledby="editCountryLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 tra class="modal-title" id="editCountryLabel">Editar color</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Save">
+                    <div class="form-group">
+                        <label tra asp-for="Id">Código</label>
+                        <input asp-for="Id" class="form-control" />
+                        <span asp-validation-for="Id" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label tra asp-for="Nombre">Color</label>
+                        <input asp-for="Nombre" class="form-control" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button tra type="button" class="btn btn-secondary" data-dismiss="modal"><t>Cerrar</t></button>
+                <button tra type="button" class="btn btn-primary" id="ModalSave"><t>Guardar</t></button>
+            </div>
+        </div>
+    </div>
+</div>
